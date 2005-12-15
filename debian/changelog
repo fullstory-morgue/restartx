@@ -1,3 +1,13 @@
+restartx-kanotix (0.5.9) unstable; urgency=low
+
+  * synch with knoppix-restartx 0.5-3, changed by Klaus Knopper
+    <knopper@knopper.net>:
+    - Added openbox, ratpoison, Looking Glass.
+  * bump compat level to 5.
+  * remove knoppix virtual packages.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 13 Dec 2005 11:41:40 +0100
+
 restartx-kanotix (0.5.8) unstable; urgency=low
 
   * overhaul packaging.

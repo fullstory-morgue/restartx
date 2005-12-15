@@ -35,12 +35,16 @@ DESKTOPS=(kde "KDE - The K Desktop Environment" on \
 gnome "GNOME - The object-oriented desktop" off \
 wmaker "Window Maker" off \
 icewm "Ice WM" off \
+xfce "XFCE 3" off \
 xfce4 "XFCE 4" off \
 fluxbox "FluxBox" off \
 larswm "LarsWM" off \
+lg3d "Looking Glass" off \
+openbox "OpenBox" off \
+ratpoison "RatPoison" off \
 twm "TWM" off)
 # Corresponding commands for "which"
-COMMANDS=(startkde gnome-session wmaker icewm-session startxfce4 fluxbox larswm twm)
+COMMANDS=(startkde gnome-session wmaker icewm-session xfce xfce4-session fluxbox larswm lg3d openbox ratpoison twm)
 
 # Language-dependent Messages
 case "$LANGUAGE" in
