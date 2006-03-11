@@ -1,3 +1,9 @@
+restartx-kanotix (0.5.11) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 11 Mar 2006 23:57:31 +0100
+
 restartx-kanotix (0.5.10) unstable; urgency=low
 
   * remove cdbs auto-update feature.
