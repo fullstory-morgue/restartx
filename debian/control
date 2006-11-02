@@ -7,7 +7,7 @@ Standards-Version: 3.7.2
 
 Package: restartx-kanotix
 Architecture: all
-Depends: dialog, xsession-initscript-kanotix
+Depends: dialog, xsession-initscript-kanotix, kanotix-su
 Recommends: xdialog
 Description: shell GUI for restarting the KANOTIX desktop
  Don't use this tool on your installed system.

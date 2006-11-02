@@ -2,20 +2,20 @@
 # restartx - restart desktop in KNOPPIX
 # (C) Klaus Knopper Mar 2004
 
-PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin"
+PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin"
 export PATH
 
 XDIALOG_HIGH_DIALOG_COMPAT=1
 export XDIALOG_HIGH_DIALOG_COMPAT
 
 # Get root
-[ "`id -u`" != "0" ] && exec sudo "$0" "$@"
+[ "`id -u`" != "0" ] && exec kanotix-su "$0" "$@"
 
 TMP="/tmp/restartx.tmp$$"
 
-bailout(){
-rm -f "$TMP"
-exit 0
+bailout() {
+	rm -f "$TMP"
+	exit 0
 }
 
 DIALOG="dialog"
@@ -47,39 +47,38 @@ twm "TWM" off)
 COMMANDS=(startkde gnome-session wmaker icewm-session xfce xfce4-session fluxbox larswm lg3d openbox ratpoison twm)
 
 # Language-dependent Messages
-case "$LANGUAGE" in
-de*|at*|ch*)
-TITLE1="KANOTIX X-Restart"
-MESSAGE1="Bitte gewünschten Desktop/Windowmanager auswählen:"
-MESSAGE2="
-Wollen Sie jetzt wirklich den X-Server neu starten? Alle laufenden Programme mit Grafikausgabe werden beendet!"
-;;
-*)
-TITLE1="KANOTIX X-Restart"
-MESSAGE1="Please chose Desktop/Windowmanager"
-MESSAGE2="
-Do you REALLY want to restart the X-Server now? All running programs with graphics output will be terminated!"
-;;
+case "$LANG" in
+	de*|at*|ch*)
+		TITLE1="KANOTIX X-Restart"
+		MESSAGE1="Bitte gewünschten Desktop/Windowmanager auswählen:"
+		MESSAGE2="Wollen Sie jetzt wirklich den X-Server neu starten? Alle laufenden Programme mit Grafikausgabe werden beendet!"
+		;;
+	*)
+		TITLE1="KANOTIX X-Restart"
+		MESSAGE1="Please chose Desktop/Windowmanager"
+		MESSAGE2="Do you REALLY want to restart the X-Server now? All running programs with graphics output will be terminated!"
+		;;
 esac
 
 num=${#COMMANDS[@]}
 for ((i=0; i<$num; i++)); do
-# Remove non-existing desktops/descriptions from list
-d0="$(($i * 3))"
-d1="$(($i * 3 + 1))"
-d2="$(($i * 3 + 2))"
-if type "${COMMANDS[$i]}" >/dev/null 2>&1; then
-[ "$DESKTOP" = "${DESKTOPS[$(($i * 3))]}" ] && DESKTOPS[$(($i * 3 + 2))]="on" || DESKTOPS[$(($i * 3 + 2))]="off"
-else
-unset DESKTOPS[$d0]
-unset DESKTOPS[$d1]
-unset DESKTOPS[$d2]
-unset COMMANDS[$i]
-fi
+	# Remove non-existing desktops/descriptions from list
+	d0="$(($i * 3))"
+	d1="$(($i * 3 + 1))"
+	d2="$(($i * 3 + 2))"
+
+	if type "${COMMANDS[$i]}" >/dev/null 2>&1; then
+		[ "$DESKTOP" = "${DESKTOPS[$(($i * 3))]}" ] && DESKTOPS[$(($i * 3 + 2))]="on" || DESKTOPS[$(($i * 3 + 2))]="off"
+	else
+		unset DESKTOPS[$d0]
+		unset DESKTOPS[$d1]
+		unset DESKTOPS[$d2]
+		unset COMMANDS[$i]
+	fi
 done
 
 rm -f "$TMP"
-$DIALOG --clear --title "$TITLE1" --radiolist "$MESSAGE1" 18 75 9 "${DESKTOPS[@]}" 2>"$TMP" || bailout
+"$DIALOG" --clear --title "$TITLE1" --radiolist "$MESSAGE1" 18 75 9 "${DESKTOPS[@]}" 2>"$TMP" || bailout
 
 echo "DESKTOP=\"$(<$TMP)\"" >>/etc/sysconfig/desktop
 echo "DESKTOP=\"$(<$TMP)\"" >>/etc/sysconfig/knoppix
@@ -90,4 +89,5 @@ $DIALOG --title "$TITLE1" --yesno "$MESSAGE2" 8 65 || bailout
 
 /etc/init.d/xsession restart
 
-exit $?
+exit "$?"
+
