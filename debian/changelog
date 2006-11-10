@@ -1,8 +1,8 @@
-restartx-kanotix (0.5.13) UNRELEASED; urgency=low
+restartx-kanotix (0.5.13) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * fix insecure tempfile handling.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu,  2 Nov 2006 22:37:07 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 10 Nov 2006 15:10:46 +0100
 
 restartx-kanotix (0.5.12) unstable; urgency=low
 
@@ -77,17 +77,17 @@ restartx-knoppix (0.5-3) unstable; urgency=low
 
   * Replaced "kde3" by "startkde" in commands to search for
 
- -- root <knopper@linuxtag.net>  Mon, 19 Apr 2004 20:50:14 +0200
+ -- Klaus Knopper <knopper@linuxtag.net>  Mon, 19 Apr 2004 20:50:14 +0200
 
 restartx-knoppix (0.5-2) unstable; urgency=low
 
   * Changed icon
 
- -- root <knopper@linuxtag.net>  Thu, 26 Feb 2004 23:27:51 +0100
+ -- Klaus Knopper <knopper@linuxtag.net>  Thu, 26 Feb 2004 23:27:51 +0100
 
 restartx-knoppix (0.5-1) unstable; urgency=low
 
   * Initial Release
 
- -- root <knopper@linuxtag.net>  Sun, 23 Feb 2003 19:55:44 +0100
+ -- Klaus Knopper <knopper@linuxtag.net>  Sun, 23 Feb 2003 19:55:44 +0100
 
