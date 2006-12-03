@@ -1,13 +1,14 @@
-Source: restartx-kanotix
+Source: restartx
 Section: x11
 Priority: optional
 Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 Build-Depends: cdbs (>= 0.4.23-1.1), debhelper (>= 5.0.0)
 Standards-Version: 3.7.2
 
-Package: restartx-kanotix
+Package: restartx
 Architecture: all
-Depends: dialog, xsession-initscript-kanotix, kanotix-su
+Depends: dialog, xsession-initscript-sidux, su-me
+Conflicts: restartx-kanotix
 Recommends: xdialog
-Description: shell GUI for restarting the KANOTIX desktop
+Description: shell GUI for restarting the Sidux desktop
  Don't use this tool on your installed system.

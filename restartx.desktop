@@ -1,6 +1,6 @@
 [Desktop Entry]
 Exec=/usr/sbin/restartx
-Name[de]=KANOTIX-Desktop Auswahl/Neustart
-Name=Choose/Restart KANOTIX Desktop
+Name[de]=Sidux-Desktop Auswahl/Neustart
+Name=Choose/Restart Sidux Desktop
 Icon=kanotix
 Type=Application
