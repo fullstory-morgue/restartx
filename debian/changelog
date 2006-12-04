@@ -3,8 +3,9 @@ restartx (0.5.14) UNRELEASED; urgency=low
   * NOT RELEASED YET
 
   * Initial version for sidux
-
- -- Joaquim Boura <x-un-i@sidux.com>  Sun,  3 Dec 2006 17:37:26 +0100
+  * fixed mispelling
+ 
+ -- Joaquim Boura <x-un-i@sidux.com>  Mon,  4 Dec 2006 14:43:47 +0100
 
 restartx-kanotix (0.5.13) unstable; urgency=low
 
