@@ -1,3 +1,9 @@
+restartx (0.5.16) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon,  1 Jan 2007 23:45:51 +0100
+
 restartx (0.5.15) unstable; urgency=low
 
   * remove obsolete kanotix reference.
