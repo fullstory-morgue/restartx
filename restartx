@@ -49,12 +49,12 @@ COMMANDS=(startkde gnome-session wmaker icewm-session xfce xfce4-session fluxbox
 # Language-dependent Messages
 case "$LANG" in
 	de*|at*|ch*)
-		TITLE1="KANOTIX X-Restart"
+		TITLE1="X-Restart"
 		MESSAGE1="Bitte gewünschten Desktop/Windowmanager auswählen:"
 		MESSAGE2="Wollen Sie jetzt wirklich den X-Server neu starten? Alle laufenden Programme mit Grafikausgabe werden beendet!"
 		;;
 	*)
-		TITLE1="KANOTIX X-Restart"
+		TITLE1="X-Restart"
 		MESSAGE1="Please chose Desktop/Windowmanager"
 		MESSAGE2="Do you REALLY want to restart the X-Server now? All running programs with graphics output will be terminated!"
 		;;
