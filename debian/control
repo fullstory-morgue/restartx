@@ -7,7 +7,7 @@ Standards-Version: 3.7.2
 
 Package: restartx
 Architecture: all
-Depends: dialog, xsession-initscript-sidux, su-me
+Depends: dialog, xsession-sidux, su-me
 Conflicts: restartx-kanotix
 Recommends: xdialog
 Description: shell GUI for restarting the sidux desktop
