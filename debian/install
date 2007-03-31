@@ -1,2 +1,2 @@
-restartx usr/sbin/
-*.desktop usr/share/applnk/sidux/Utilities/
+restartx	usr/sbin/
+*.desktop	usr/share/applications/sidux/

@@ -1,6 +1,8 @@
-restartx (0.5.18) UNRELEASED; urgency=low
+restartx (0.5.18) ORPHANED; urgency=low
 
   * NOT RELEASED YET
+  * ORPHAN PACKAGE
+  * add XDG menus.
 
  -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu,  1 Mar 2007 17:48:46 +0100
 
